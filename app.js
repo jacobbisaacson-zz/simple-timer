@@ -1,20 +1,6 @@
-console.log("timers and stopwatches");
-
-// using setInterval make it so that you see a count starting at zero 
-// in your console and printing the next integer every second
-
-// research clearInterval and make it so that the counter counts to 
-// 10 and then stops
-
-// move everything out of the global scope into an object called timer
-// timeElapsed should be a property on that object
-// and the rest of the code should be in a start() method.
-// you should be able to start the timer from your console timer.start()
+console.log("simple timer with reset and stop");
 
 const timer = {
-  /// these properties are the STATE of your application
-  // anything you need to KEEP TRACK OF goes here
-  // anything here is accessible in every method on this obj
   intervalID: null, 
   timeElapsed: 0,
 
@@ -36,7 +22,7 @@ const timer = {
     const seconds = this.timeElapsed
 
     let mm = Math.floor(seconds/60)
-    // console.log(mm); //
+    console.log(mm); //
 
     let ss = seconds - (mm * 60)
 
@@ -60,7 +46,6 @@ const timer = {
     }
   }
 }
-
 
 document.getElementsByTagName('button')[0].addEventListener('click', () => {
   timer.start()
