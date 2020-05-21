@@ -32,11 +32,11 @@ const timer = {
     }
 
     const timeElement = document.getElementById('time')
-    if(mm >= 10) {
+    if(ss >= 10) {
       timeElement.style.color = "red"
     }
     timeElement.innerText = `${mm}:${ss}`
-    if(mm === 15) {
+    if(ss === 15) {
       document.body.style.backgroundColor = "black";
       document.body.style.color = "red";
       const stopMsg = document.createElement('h1')
@@ -44,6 +44,9 @@ const timer = {
       stopMsg.innerText = "STOP NOW"
       document.body.appendChild(stopMsg)
       clearInterval(this.intervalID)
+      console.log(stopMsg);
+      // will stop the timer at 15 seconds with big black and red rext saying stop now
+      // otherwise can stop and reset whenever
     }
   }
 }
