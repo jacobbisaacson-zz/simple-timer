@@ -22,9 +22,10 @@ const timer = {
     const seconds = this.timeElapsed
 
     let mm = Math.floor(seconds/60)
-    console.log(mm); //
+    // console.log(mm); //
 
     let ss = seconds - (mm * 60)
+    console.log(ss);
 
     if(ss < 10) {
       ss = "0" + ss  // type coercion -- will convert to string
